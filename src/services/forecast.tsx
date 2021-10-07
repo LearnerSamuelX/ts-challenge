@@ -3,7 +3,7 @@ import React from "react";
 export interface Weather {
     city:string,
     temperature:number
-    weather?:string
+    weather?:string //make this url
 }
 
 const WeatherData = async (cityname:string):Promise<any>=>{

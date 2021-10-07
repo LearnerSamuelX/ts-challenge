@@ -3,8 +3,8 @@
 }
 
 .panel-container{
-  width:15rem;
-  border:2.5px rgb(172, 248, 172) solid;
+  width:30rem;
+  background-color: rgb(158, 210, 255);
   margin-left:auto;
   margin-right:auto;
   margin-top:2.5rem;
@@ -13,17 +13,30 @@
 }
 
 .panel{
-  width:10rem;
-  border:2.5px red solid;
+  width:20rem;
+  background-color: rgb(231, 255, 123);
+  padding:1rem 1rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
   margin-left:auto;
   margin-right:auto;
   display: flex;
   flex-direction: row;
 }
 
+.panel p{
+  font-size: 25px;
+}
+
+.panel img{
+  height:5rem;
+}
+
 .panel-element{
-  border:2.5px rgb(255, 174, 0) solid;
-  margin:auto;
+  width:6rem;
+  text-align: center;
+  margin-left:0;
+  margin-right:auto;
 }
 
 /* tablet 800px */
