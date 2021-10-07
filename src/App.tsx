@@ -1,10 +1,9 @@
 import React,{useState,useEffect} from 'react';
+import './App.css';
 
 import WeatherData from './services/forecast';
 import { Weather as WeatherInfo } from './services/forecast';
-
-import './App.css';
-
+import Panel from './components/panel'
 
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
           setWeather(weather.concat(
             {
               city:cityName,
-              temperature:future_temperature,
+              temperature:Math.floor(future_temperature-273.15),
               weather:future_weather
             }
           ))
@@ -51,8 +50,8 @@ function App() {
           </form>
       </div>
       {/* listed by city */}
-      <div className='weather-panel'>
-        
+      <div className='panel-container'>
+          <Panel city={'Toronto'} temperature={20} weather={'sun'} />
       </div>
     </div>
   );
