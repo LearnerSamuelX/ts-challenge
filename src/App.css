@@ -1,4 +1,11 @@
 .App {
+  text-align:center;
+  width:30rem;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.App h1{
   text-align: center;
 }
 
@@ -40,10 +47,9 @@
 }
 
 /* tablet 800px */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width:800px){
+
+
 }
 
 /* mobile 500px */

@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import './App.css';
 
-import WeatherData from './services/forecast';
-import { Weather as WeatherInfo } from './services/forecast';
+
+import WeatherData, { Weather as WeatherInfo } from './services/forecast';
 import Panel from './components/panel'
 
 
@@ -37,8 +37,10 @@ function App() {
               weather:future_weather
             }
           ))
+          
         }).catch((err:any)=>{
           console.log(err)
+          alert('City of such name not found')
         })
         setCityName('')
       }
@@ -57,8 +59,8 @@ function App() {
       {/* listed by city */}
       <div className='panel-container'>
           {weather.length===0 && 
-            <div>
-                No Information
+            <div className='no-info'>
+                <p>No Information</p>
             </div>
           }
           {
